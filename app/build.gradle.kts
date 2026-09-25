@@ -12,7 +12,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "uk.telegramgames.lodolock"
+    namespace = "uk.telegramgames.kidlock"
     compileSdk = 34
 
     buildFeatures {
@@ -24,7 +24,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "uk.telegramgames.lodolock"
+        applicationId = "uk.telegramgames.kidlock"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

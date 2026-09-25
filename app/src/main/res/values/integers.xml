@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer name="keylock_7_00">7</integer>
+    <integer name="keylock_22_00">22</integer>
+    <integer name="keylock_8_00">8</integer>
     <integer-array name="onboarding_preset_minutes">
         <item>30</item>
         <item>60</item>

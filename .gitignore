@@ -8,6 +8,10 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+# Signing
+keystore.properties
+*.jks
+
 # Android Studio / IntelliJ IDEA
 .idea/
 *.iml

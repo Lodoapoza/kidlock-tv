@@ -6,188 +6,262 @@
     <!-- Main screen -->
     <string name="remaining_time_placeholder">0:00:00</string>
     <string name="remaining_time_format">%s</string>
-    <string name="enter_code">Введите код для продления времени</string>
+    <string name="enter_code">Entrez le code</string>
+
+
+    <!-- Lock screen — Timer -->
+    <string name="lock_timer_reason">Le temps d\'écran est terminé.</string>
+    <string name="lock_timer_unlock_time">Disponible demain</string>
+
+    <!-- Lock screen — Schedule -->
+    <string name="lock_schedule_reason">Ce n\'est pas encore l\'heure.</string>
+    <string name="lock_schedule_unlock_time">Disponible à %1$s</string>
+    <string name="lock_schedule_next_window">Prochaine plage de blocage : %1$s</string>
+
+    <!-- Lock screen — shared -->
+    <string name="enter_code_schedule">Entrez le code pour déverrouiller</string>
+    <string name="guard_blocked_message">Réglages protégés pendant le blocage. Entrez le code.</string>
+    <string name="service_disabled_message">Le service d\'accessibilité a été désactivé. Réactivez-le dans les réglages pour rétablir le blocage.</string>
 
     <!-- Admin panel -->
-    <string name="admin_panel">Админ-панель</string>
-    <string name="exit">Выход</string>
-    <string name="remaining_time_admin_format">Оставшееся время: %s</string>
+    <string name="admin_panel">Panneau d\'administration</string>
+    <string name="exit">Quitter</string>
+    <string name="remaining_time_admin_format">Temps restant : %s</string>
 
     <!-- Admin sections -->
-    <string name="section_dashboard">Мониторинг</string>
-    <string name="section_settings">Настройки</string>
-    <string name="section_access">Доступ</string>
-    <string name="section_system">Система</string>
-    <string name="section_about">О программе</string>
+    <string name="section_dashboard">Monitoring</string>
+    <string name="section_settings">Paramètres</string>
+    <string name="section_access">Accès</string>
+    <string name="section_system">Système</string>
+    <string name="section_about">À propos</string>
 
     <!-- About section (AGPLv3 compliance) -->
-    <string name="about_title">О программе</string>
-    <string name="about_app_description">Приложение для родительского контроля экранного времени на Android TV</string>
-    <string name="about_copyright">Copyright (C) 2026 Yan Masharski</string>
-    <string name="about_license_title">Лицензия</string>
-    <string name="about_license_text">This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
-    <string name="about_warranty_title">Отказ от гарантий</string>
-    <string name="about_warranty_text">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.</string>
-    <string name="about_source_code_title">Исходный код</string>
-    <string name="about_source_code_url">https://github.com/yanmasharski/kidlock-tv</string>
-    <string name="about_license_url">https://www.gnu.org/licenses/agpl-3.0.html</string>
-    <string name="about_view_source_code">Открыть исходный код</string>
-    <string name="about_view_license">Открыть полный текст лицензии</string>
-    <string name="about_version_format">Версия: %s</string>
+    <string name="about_title">À propos</string>
+    <string name="about_app_description">KidLock est une application de contrôle parental du temps d\'écran pour Android TV et Google TV.</string>
+    <string name="about_copyright">Adaptée et maintenue par KidLock contributors</string>
+    <string name="about_version_format">Version : %s</string>
+    <string name="about_contact">KidLock contributors — https://www.github.com/yanmasharski/kidlock-tv —  — /yanmasharski/kidlock-tv</string>
 
     <!-- Codes section -->
-    <string name="generate_codes_label">Генерация кодов:</string>
-    <string name="code_count_hint">Количество</string>
-    <string name="minutes_hint">Минут</string>
-    <string name="generate_button">Сгенерировать</string>
-    <string name="generate_codes_free">Сгенерировать 3 кода</string>
-    <string name="generate_codes_paid">Сгенерировать коды</string>
-    <string name="codes_list_label">Список кодов:</string>
-    <string name="code_status_used">Использован</string>
-    <string name="code_status_unused">Не использован</string>
-    <string name="time_added_minutes_format">+%d мин</string>
-    <string name="delete_button">Удалить</string>
+    <string name="generate_codes_label">Génération de codes :</string>
+    <string name="code_count_hint">Quantité</string>
+    <string name="minutes_hint">Minutes</string>
+    <string name="generate_button">Générer</string>
+    <string name="generate_codes_free">Générer 3 codes</string>
+    <string name="generate_codes_paid">Générer des codes</string>
+    <string name="codes_list_label">Liste des codes :</string>
+    <string name="code_status_used">Utilisé</string>
+    <string name="code_status_unused">Non utilisé</string>
+    <string name="time_added_minutes_format">+%d min</string>
+    <string name="delete_button">Supprimer</string>
 
     <!-- Time section -->
-    <string name="remaining_time_label">Оставшееся время: --</string>
-    <string name="daily_limit_label">Дневной лимит (минуты):</string>
-    <string name="set_button">Установить</string>
-    <string name="unlock_button">Разблокировать</string>
+    <string name="remaining_time_label">Temps restant : --</string>
+    <string name="daily_limit_label">Limite journalière (minutes) :</string>
+    <string name="set_time_limit">Définir la limite de temps</string>
+    <string name="set_button">Définir</string>
+    <string name="unlock_button">Déverrouiller</string>
 
     <!-- Security section -->
-    <string name="change_pin_label">Изменить PIN:</string>
-    <string name="new_pin_hint">Новый PIN</string>
-    <string name="change_button">Изменить</string>
+    <string name="change_pin_label">Changer le PIN :</string>
+    <string name="new_pin_hint">Nouveau PIN</string>
+    <string name="change_button">Changer</string>
 
     <!-- Settings section -->
-    <string name="autostart_label">Автозапуск приложения:</string>
-    <string name="autostart_description">Автоматически запускать приложение при включении устройства</string>
-    <string name="app_blocking_label">Блокировка приложений:</string>
-    <string name="app_blocking_description">Включить блокировку приложений при истечении времени</string>
-    <string name="permissions_status_label">Статус разрешений:</string>
-    <string name="accessibility_status_placeholder">Accessibility Service: --</string>
-    <string name="accessibility_status_format">Accessibility Service: %s</string>
-    <string name="accessibility_enabled">Включен</string>
-    <string name="accessibility_disabled">Выключен</string>
-    <string name="accessibility_settings_button">Настроить Accessibility Service</string>
-    <string name="usage_stats_status_placeholder">Usage Stats: --</string>
-    <string name="usage_stats_status_format">Usage Stats: %s</string>
-    <string name="usage_stats_granted">Разрешено</string>
-    <string name="usage_stats_denied">Не разрешено</string>
-    <string name="usage_stats_settings_button">Настроить Usage Stats</string>
-    <string name="overlay_status_format">Поверх других окон: %s</string>
-    <string name="overlay_settings_button">Настроить отображение поверх окон</string>
-    <string name="overlay_instructions">Для отображения интерфейса KidLock поверх других приложений (блокировки), необходимо предоставить разрешение Overlay Permission:\n\n1. Нажмите кнопку \"Настроить отображение поверх окон\"\n2. Найдите \"KidLock\" в списке приложений\n3. Включите переключатель \"Разрешить отображение поверх других окон\"\n4. Вернитесь в приложение.</string>
+    <string name="autostart_label">Démarrage automatique :</string>
+    <string name="autostart_description">Lancer automatiquement l\'application au démarrage de l\'appareil</string>
+    <string name="app_blocking_label">Blocage d\'applications :</string>
+    <string name="timer_enabled_label">Mode minuteur :</string>
+    <string name="app_blocking_description">Activer le blocage des applications lorsque le temps est écoulé</string>
+    <string name="permissions_status_label">État des permissions :</string>
+    <string name="accessibility_status_placeholder">Service d\'accessibilité : --</string>
+    <string name="accessibility_status_format">Service d\'accessibilité : %s</string>
+    <string name="accessibility_enabled">Activé</string>
+    <string name="accessibility_disabled">Désactivé</string>
+    <string name="accessibility_settings_button">Configurer le service d\'accessibilité</string>
+    <string name="usage_stats_status_placeholder">Statistiques d\'utilisation : --</string>
+    <string name="usage_stats_status_format">Statistiques d\'utilisation : %s</string>
+    <string name="usage_stats_granted">Autorisé</string>
+    <string name="usage_stats_denied">Non autorisé</string>
+    <string name="usage_stats_settings_button">Configurer les statistiques d\'utilisation</string>
+    <string name="overlay_status_format">Superposition : %s</string>
+    <string name="overlay_granted">Autorisé</string>
+    <string name="overlay_denied">Non autorisé</string>
+    <string name="overlay_settings_button">Configurer la superposition</string>
+    <string name="overlay_instructions">Pour afficher l\'interface KidLock par-dessus les autres applications (blocage), vous devez accorder la permission de superposition :\n\n1. Appuyez sur « Configurer la superposition »\n2. Trouvez « KidLock » dans la liste des applications\n3. Activez « Autoriser l\'affichage par-dessus les autres applications »\n4. Revenez à l\'application.</string>
+    <string name="onboarding_overlay_title">Superposition KidLock</string>
+    <string name="onboarding_overlay_description">Cette autorisation permet à KidLock de ramener systématiquement l\'écran de blocage au premier plan.</string>
+    <string name="onboarding_overlay_steps">Après l\'autorisation, revenez ici pour continuer. Elle est demandée une seule fois.</string>
+    <string name="onboarding_overlay_status_format">Superposition : %s</string>
+    <string name="onboarding_overlay_warning">Autorisez « Afficher par-dessus les autres applications » pour garantir le blocage.</string>
 
     <!-- PIN input -->
-    <string name="enter_pin_title">Введите PIN-код</string>
-    <string name="enter_pin_hint">Введите 6-значный PIN</string>
-    <string name="enter_pin_error">Введите PIN-код</string>
-    <string name="wrong_pin_error">Неверный PIN</string>
+    <string name="enter_pin_title">Entrez le code PIN</string>
+    <string name="enter_pin_hint">Entrez un PIN à 6 chiffres</string>
+    <string name="enter_pin_error">Entrez le code PIN</string>
+    <string name="wrong_pin_error">PIN incorrect</string>
+    <string name="schedule_admin_choice_title">Blocage horaire actif</string>
+    <string name="schedule_admin_choice_message">Que souhaitez-vous faire ? Le centre d’administration ne déverrouille pas les applications.</string>
+    <string name="schedule_admin_choice_unlock">Déverrouiller jusqu’à la fin de la plage</string>
+    <string name="schedule_admin_choice_admin">Entrer dans le centre d’administration</string>
 
     <!-- Code input messages -->
-    <string name="code_length_error">Код должен состоять из 6 цифр</string>
-    <string name="code_already_used_error">Код уже использован</string>
-    <string name="code_activated_format">Код активирован! Добавлено %d минут</string>
-    <string name="code_not_found_error">Код не найден</string>
+    <string name="code_length_error">Le code doit comporter 6 chiffres</string>
+    <string name="code_already_used_error">Code déjà utilisé</string>
+    <string name="code_activated_format">Code activé ! %d minutes ajoutées</string>
+    <string name="code_activated_schedule_hint">%d minutes ajoutées. Utilisez le PIN pour déverrouiller le planning.</string>
+    <string name="code_not_found_error">Code introuvable</string>
+    <string name="rate_limit_lockout">Trop de tentatives. Réessayez dans %ds</string>
+    <string name="rate_limit_reached">5 tentatives échouées. Verrouillé 60 secondes.</string>
 
     <!-- Services and notifications -->
-    <string name="accessibility_service_description">Служба KidLock для контроля времени использования приложений на Android TV. Включите эту службу для автоматической блокировки приложений при исчерпании времени. Без этой службы приложение не сможет блокировать доступ к другим приложениям.</string>
-    <string name="time_limit_reached">Лимит времени исчерпан</string>
-    <string name="time_limit_reached_message">Время использования телевизора закончилось. Введите код для продолжения.</string>
-    <string name="time_limit_notifications">Уведомления о лимите времени</string>
-    <string name="accessibility_instructions">Для работы блокировки приложений необходимо включить Accessibility Service:\n\n1. Нажмите кнопку \"Настроить Accessibility Service\"\n2. Найдите \"KidLock\" в списке служб\n3. Включите переключатель рядом с KidLock\n4. Подтвердите включение службы\n\nПосле включения служба будет автоматически блокировать приложения при исчерпании времени.</string>
-    <string name="usage_stats_instructions">Для отслеживания времени использования приложений необходимо предоставить разрешение Usage Stats:\n\n1. Нажмите кнопку \"Настроить Usage Stats\"\n2. Найдите \"KidLock\" в списке приложений\n3. Включите переключатель \"Разрешить доступ к статистике использования\"\n4. Вернитесь в приложение\n\nБез этого разрешения приложение не сможет отслеживать время использования других приложений.</string>
+    <string name="accessibility_service_description">Service KidLock de contrôle du temps d\'écran sur Android TV. Activez ce service pour le blocage automatique des applications lorsque le temps est écoulé. Sans ce service, l\'application ne pourra pas bloquer l\'accès aux autres applications.</string>
+    <string name="time_limit_reached">Limite de temps atteinte</string>
+    <string name="time_limit_reached_message">Le temps d\'utilisation est terminé. Entrez un code pour continuer.</string>
+    <string name="time_limit_notifications">Notifications de limite de temps</string>
+    <string name="accessibility_instructions">Pour activer le blocage des applications, vous devez activer le service d\'accessibilité :\n\n1. Appuyez sur « Configurer le service d\'accessibilité »\n2. Trouvez « KidLock » dans la liste des services\n3. Activez le bouton à côté de KidLock\n4. Confirmez l\'activation du service\n\nUne fois activé, le service bloquera automatiquement les applications lorsque le temps sera écoulé.</string>
+    <string name="usage_stats_instructions">Pour suivre le temps d\'utilisation des applications, vous devez accorder la permission des statistiques d\'utilisation :\n\n1. Appuyez sur « Configurer les statistiques d\'utilisation »\n2. Trouvez « KidLock » dans la liste des applications\n3. Activez « Autoriser l\'accès aux statistiques d\'utilisation »\n4. Revenez à l\'application\n\nSans cette permission, l\'application ne pourra pas suivre le temps d\'utilisation des autres applications.</string>
 
     <!-- Time formatting -->
-    <string name="time_format_hours_minutes">%1$d ч %2$d мин</string>
-    <string name="time_format_hours_only">%d ч</string>
-    <string name="time_format_minutes_only">%d мин</string>
-    <string name="limit_set_format">Лимит установлен: %s</string>
+    <string name="time_format_hours_minutes">%1$d h %2$d min</string>
+    <string name="time_format_hours_only">%d h</string>
+    <string name="time_format_minutes_only">%d min</string>
+    <string name="limit_set_format">Limite définie : %s</string>
 
     <!-- Admin messages -->
-    <string name="limit_negative_error">Лимит не может быть отрицательным</string>
-    <string name="code_count_error">Количество кодов должно быть от 1 до 100</string>
-    <string name="time_negative_error">Время не может быть отрицательным</string>
-    <string name="codes_generated_format">Сгенерировано %1$d кодов по %2$d минут</string>
-    <string name="code_deleted">Код удален</string>
-    <string name="pin_format_error">PIN должен состоять из 6 цифр</string>
-    <string name="pin_changed">PIN изменен</string>
-    <string name="time_unlocked">Время разблокировано</string>
-    <string name="autostart_enabled">Автозапуск включен</string>
-    <string name="autostart_disabled">Автозапуск выключен</string>
-    <string name="blocking_requires_permissions">Для включения блокировки необходимы все разрешения</string>
-    <string name="blocking_enabled">Блокировка включена</string>
-    <string name="blocking_disabled">Блокировка выключена</string>
-    
+    <string name="limit_negative_error">La limite ne peut pas être négative</string>
+    <string name="code_count_error">Le nombre de codes doit être entre 1 et 100</string>
+    <string name="time_negative_error">Le temps ne peut pas être négatif</string>
+    <string name="codes_generated_format">%1$d codes générés pour %2$d minutes chacun</string>
+    <string name="code_deleted">Code supprimé</string>
+    <string name="pin_format_error">Le PIN doit comporter 6 chiffres</string>
+    <string name="pin_changed">PIN modifié</string>
+    <string name="time_unlocked">Temps déverrouillé</string>
+    <string name="autostart_enabled">Démarrage automatique activé</string>
+    <string name="autostart_disabled">Démarrage automatique désactivé</string>
+    <string name="blocking_requires_permissions">Toutes les permissions sont requises pour activer le blocage</string>
+    <string name="blocking_enabled">Blocage activé</string>
+    <string name="blocking_disabled">Blocage désactivé</string>
+
     <!-- Dashboard -->
-    <string name="unlock_now">Разблокировать сейчас</string>
-    <string name="status_locked">Заблокировано</string>
-    <string name="status_unlocked">Разблокировано</string>
-    <string name="save_limit">Сохранить лимит</string>
-    <string name="unlock_until_tomorrow">Разблокировать до завтра</string>
-    <string name="lock_until_tomorrow">Заблокировать до завтра</string>
-    <string name="time_locked">Заблокировано до завтра</string>
-    <string name="time_remaining_format">Осталось времени: %s</string>
-    <string name="time_expired">ВРЕМЯ ИСТЕКЛО</string>
-    
+    <string name="unlock_now">Déverrouiller maintenant</string>
+    <string name="status_locked">Verrouillé</string>
+    <string name="status_unlocked">Déverrouillé</string>
+    <string name="unlock_until_tomorrow">Déverrouiller jusqu\'à demain</string>
+    <string name="lock_until_tomorrow">Verrouiller jusqu\'à demain</string>
+    <string name="time_locked">Verrouillé jusqu\'à demain</string>
+    <string name="time_remaining_format">Temps restant : %s</string>
+    <string name="time_expired">TEMPS ÉCOULÉ</string>
+
     <!-- Access section -->
-    <string name="access_management">Управление доступом</string>
-    <string name="active_codes">Активные коды</string>
-    <string name="qty_hint">Кол-во</string>
-    
+    <string name="access_management">Gestion des accès</string>
+    <string name="active_codes">Codes actifs</string>
+    <string name="qty_hint">Qté</string>
+
     <!-- Settings section -->
-    <string name="admin_pin_label">Админ PIN</string>
-    <string name="enter_6_digit_pin">Введите 6-значный PIN</string>
-    <string name="change_pin">Изменить PIN</string>
-    
+    <string name="admin_pin_label">PIN admin</string>
+    <string name="enter_6_digit_pin">Entrez un PIN à 6 chiffres</string>
+    <string name="change_pin">Changer le PIN</string>
+
     <!-- System -->
-    <string name="system_permissions_title">Разрешения системы</string>
-    <string name="system_diagnostics_title">Диагностика</string>
+    <string name="system_permissions_title">Permissions système</string>
+    <string name="system_diagnostics_title">Diagnostic</string>
+
+    <!-- Schedule section -->
+    <string name="section_schedule">Horaires</string>
+    <string name="schedule_enabled">Activer les horaires</string>
+    <string name="schedule_only_warning">Attention : mode planning uniquement — aucun limite de temps quotidienne ne sera imposée pendant les heures autorisées.</string>
+    <string name="schedule_windows_list">Plages horaires configurées :</string>
+    <string name="schedule_no_windows">Aucune plage horaire configurée</string>
+    <string name="schedule_add_window">+ Ajouter une plage</string>
+    <string name="schedule_edit_window">Modifier la plage</string>
+    <string name="schedule_days_label">Jours de la semaine</string>
+    <string name="schedule_every_day">Tous les jours</string>
+    <string name="schedule_start_time">Heure de début :</string>
+    <string name="schedule_end_time">Heure de fin :</string>
+    <string name="schedule_type_label">Type de plage :</string>
+    <string name="schedule_type_block">Blocage (tv interdite)</string>
+    <string name="schedule_type_allow">Autorisation (tv autorisée)</string>
+    <string name="schedule_global_block_label">Toutes les applications</string>
+    <string name="schedule_save">Enregistrer</string>
+    <string name="schedule_active_status">Horaire actif</string>
+    <string name="schedule_unlocked_until_format">Déverrouillé jusqu\'à %1$s</string>
+    <string name="schedule_invalid_window">Plage invalide : le début et la fin doivent être différents</string>
+    <string name="schedule_saved">Horaire enregistré</string>
+    <string name="schedule_invalid">Vérifiez les heures saisies</string>
+    <string name="schedule_overlap_error">Cette plage chevauche une plage existante</string>
+    <string name="schedule_max_reached">Maximum %d plages atteint</string>
+    <string name="schedule_window_added">Plage ajoutée</string>
+    <string name="schedule_window_updated">Plage mise à jour</string>
+    <string name="schedule_window_removed">Plage supprimée</string>
+    <string name="schedule_delete_title">Supprimer la plage</string>
+    <string name="schedule_delete_message">Supprimer la plage %s ?</string>
+    <string name="schedule_blocked_title">Hors plage horaire</string>
+    <string name="schedule_blocked_message">Pas encore l\'heure de regarder la télé. Entrez un code pour déverrouiller.</string>
+
+    <!-- Device admin -->
+    <string name="device_admin_active">Activé</string>
+    <string name="device_admin_inactive">Non activé</string>
+    <string name="btn_activate_device_admin">Activer la protection</string>
 
     <!-- Onboarding -->
-    <string name="onboarding_welcome_title">Добро пожаловать в KidLock</string>
-    <string name="onboarding_welcome_description">Настроим защиту экранного времени за пару шагов.</string>
-    <string name="onboarding_start_button">Начать настройку</string>
+    <string name="onboarding_welcome_title">Bienvenue sur KidLock</string>
+    <string name="onboarding_welcome_description">Configurez la protection du temps d\'écran en quelques étapes.</string>
+    <string name="onboarding_start_button">Commencer la configuration</string>
 
-    <string name="onboarding_accessibility_title">Разрешение Accessibility</string>
-    <string name="onboarding_accessibility_description">Нужно для блокировки других приложений и контроля времени.</string>
-    <string name="onboarding_accessibility_steps">1. Откройте настройки Accessibility.\n2. Найдите KidLock в списке служб.\n3. Включите переключатель и подтвердите доступ.\n4. Вернитесь в приложение.</string>
-    <string name="onboarding_accessibility_status_placeholder">Статус: --</string>
-    <string name="onboarding_accessibility_status_format">Статус: %s</string>
+    <string name="onboarding_accessibility_title">Permission d\'accessibilité</string>
+    <string name="onboarding_accessibility_description">Nécessaire pour bloquer les applications et contrôler le temps d\'écran.</string>
+    <string name="onboarding_accessibility_steps">1. Ouvrez les paramètres d\'accessibilité.\n2. Trouvez KidLock dans la liste des services.\n3. Activez le bouton et confirmez.\n4. Revenez à l\'application.</string>
+    <string name="onboarding_accessibility_status_placeholder">État : --</string>
+    <string name="onboarding_accessibility_status_format">État : %s</string>
 
-    <string name="onboarding_usage_stats_title">Разрешение Usage Access</string>
-    <string name="onboarding_usage_stats_description">Нужно для учета времени использования приложений.</string>
-    <string name="onboarding_usage_stats_steps">1. Откройте настройки Usage Access.\n2. Выберите KidLock из списка приложений.\n3. Включите доступ к статистике использования.\n4. Вернитесь в приложение.</string>
-    <string name="onboarding_usage_stats_status_placeholder">Статус: --</string>
-    <string name="onboarding_usage_stats_status_format">Статус: %s</string>
-    <string name="onboarding_usage_stats_warning">Можно пропустить, но лимиты могут работать неточно.</string>
+    <string name="onboarding_usage_stats_title">Permission d\'accès à l\'utilisation</string>
+    <string name="onboarding_usage_stats_description">Nécessaire pour suivre le temps d\'utilisation des applications.</string>
+    <string name="onboarding_usage_stats_steps">1. Ouvrez les paramètres d\'accès à l\'utilisation.\n2. Sélectionnez KidLock dans la liste des applications.\n3. Activez l\'accès aux statistiques d\'utilisation.\n4. Revenez à l\'application.</string>
+    <string name="onboarding_usage_stats_status_placeholder">État : --</string>
+    <string name="onboarding_usage_stats_status_format">État : %s</string>
+    <string name="onboarding_usage_stats_warning">Vous pouvez ignorer cette étape, mais les limites peuvent être inexactes.</string>
 
-    <string name="onboarding_time_limit_title">Базовый дневной лимит</string>
-    <string name="onboarding_time_limit_description">Выберите лимит.</string>
-    <string name="onboarding_preset_30">30 мин</string>
-    <string name="onboarding_preset_60">1 час</string>
-    <string name="onboarding_preset_120">2 часа</string>
-    <string name="onboarding_preset_180">3 часа</string>
-    <string name="onboarding_time_limit_selected_placeholder">Выберите лимит.</string>
-    <string name="onboarding_time_limit_selected_format">Выбранный лимит: %d мин</string>
+    <string name="onboarding_autostart_title">Démarrage automatique</string>
+    <string name="onboarding_autostart_description">Lancer automatiquement KidLock au démarrage de l\'appareil, pour que le blocage soit toujours actif.</string>
+    <string name="onboarding_autostart_enable">Oui, activer le démarrage automatique</string>
 
-    <string name="onboarding_pin_title">Создайте PIN администратора</string>
-    <string name="onboarding_pin_description">PIN защищает доступ к настройкам.</string>
-    <string name="onboarding_pin_hint">PIN (6 цифр)</string>
-    <string name="onboarding_pin_confirm_hint">Повторите PIN</string>
-    <string name="onboarding_pin_mismatch">PIN не совпадает.</string>
+    <string name="onboarding_time_limit_title">Limite journalière de base</string>
+    <string name="onboarding_time_limit_description">Choisissez une limite prédéfinie.</string>
+    <string name="onboarding_preset_30">30 min</string>
+    <string name="onboarding_preset_60">1 heure</string>
+    <string name="onboarding_preset_120">2 heures</string>
+    <string name="onboarding_preset_180">3 heures</string>
+    <string name="onboarding_time_limit_selected_placeholder">Sélectionnez une limite.</string>
+    <string name="onboarding_time_limit_selected_format">Limite sélectionnée : %d min</string>
 
-    <string name="onboarding_codes_title">Первые коды доступа</string>
-    <string name="onboarding_codes_description">Сгенерируйте коды для продления времени.</string>
-    <string name="onboarding_codes_generate">Сгенерировать коды</string>
-    <string name="onboarding_codes_empty">Коды пока не созданы.</string>
-    <string name="onboarding_code_format">Код %1$s — +%2$d мин</string>
-    <string name="onboarding_finish">Готово</string>
-    <string name="onboarding_open_admin">Перейти в админ-панель</string>
+    <string name="onboarding_pin_title">Créez le PIN administrateur</string>
+    <string name="onboarding_pin_description">Le PIN protège l\'accès aux paramètres.</string>
+    <string name="onboarding_pin_hint">PIN (6 chiffres)</string>
+    <string name="onboarding_pin_confirm_hint">Confirmez le PIN</string>
+    <string name="onboarding_pin_mismatch">Les PIN ne correspondent pas.</string>
 
-    <string name="onboarding_open_settings">Открыть настройки</string>
-    <string name="onboarding_next">Далее</string>
-    <string name="onboarding_back">Назад</string>
-    <string name="onboarding_skip">Пропустить</string>
+    <string name="onboarding_codes_title">Premiers codes d\'accès</string>
+    <string name="onboarding_codes_description">Générez des codes pour prolonger le temps.</string>
+    <string name="onboarding_codes_generate">Générer des codes</string>
+    <string name="onboarding_codes_empty">Aucun code pour le moment.</string>
+    <string name="onboarding_code_format">Code %1$s — +%2$d min</string>
+    <string name="onboarding_finish">Terminé</string>
+    <string name="onboarding_open_admin">Aller au panneau d\'administration</string>
+
+    <string name="onboarding_open_settings">Ouvrir les paramètres</string>
+    <string name="onboarding_next">Suivant</string>
+    <string name="onboarding_back">Retour</string>
+    <string name="onboarding_skip">Passer</string>
+
+    <!-- Mode selection -->
+    <string name="onboarding_mode_title">Choisissez le mode de protection</string>
+    <string name="onboarding_mode_description">Comment souhaitez-vous gérer le temps d\'écran ?</string>
+    <string name="onboarding_mode_timer">Minuteur</string>
+    <string name="onboarding_mode_timer_desc">Définir une limite de temps quotidienne</string>
+    <string name="onboarding_timer_hint">Minuteur : le blocage s\'activera une fois la limite quotidienne (%1$s) atteinte.</string>
+    <string name="onboarding_mode_schedule">Plage horaire</string>
+    <string name="onboarding_mode_schedule_desc">Définir des créneaux horaires autorisés</string>
+    <string name="onboarding_schedule_hint">Plage horaire : le blocage s\'activera dès qu\'une plage sera configurée, dans la section Plages de l\'administration.</string>
+    <string name="schedule_requires_window">Ajoutez d\'abord au moins une plage horaire, puis activez le planning.</string>
 </resources>

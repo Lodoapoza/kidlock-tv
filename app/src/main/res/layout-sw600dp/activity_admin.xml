@@ -1,153 +1,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="@color/admin_background">
 
-    <!-- Top Bar -->
+    <!-- Sidebar -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp"
         android:background="@color/admin_background">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_lock_idle_lock"
-            android:tint="@color/white" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp" />
-
-        <Button
-            android:id="@+id/btnExit"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="8dp"
-            android:background="@drawable/selector_ghost_button"
-            android:backgroundTint="@null"
-            android:drawableTop="@android:drawable/ic_menu_close_clear_cancel"
-            android:drawableTint="@color/white"
-            android:focusable="true" />
-    </LinearLayout>
-
-    <!-- Navigation Tabs (phone) -->
-    <HorizontalScrollView
-        android:id="@+id/nav_tabs_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:paddingHorizontal="8dp">
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="8dp">
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                android:tint="@color/white" />
+                
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp" />
 
             <Button
-                android:id="@+id/tab_schedule"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_schedule"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
+                android:id="@+id/btnExit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:background="@drawable/selector_ghost_button"
                 android:backgroundTint="@null"
-                android:layout_marginEnd="8dp"
-                android:focusable="true" />
-
-            <Button
-                android:id="@+id/tab_dashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_dashboard"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
-                android:backgroundTint="@null"
-                android:layout_marginEnd="8dp"
-                android:focusable="true" />
-
-            <Button
-                android:id="@+id/tab_access"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_access"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
-                android:backgroundTint="@null"
-                android:layout_marginEnd="8dp"
-                android:focusable="true" />
-
-            <Button
-                android:id="@+id/tab_settings"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_settings"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
-                android:backgroundTint="@null"
-                android:layout_marginEnd="8dp"
-                android:focusable="true" />
-
-            <Button
-                android:id="@+id/tab_system"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_system"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
-                android:backgroundTint="@null"
-                android:layout_marginEnd="8dp"
-                android:focusable="true" />
-
-            <Button
-                android:id="@+id/tab_about"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="@string/section_about"
-                android:textAllCaps="false"
-                android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_preset_button"
-                android:backgroundTint="@null"
+                android:drawableTop="@android:drawable/ic_menu_close_clear_cancel"
+                android:drawableTint="@color/white"
                 android:focusable="true" />
         </LinearLayout>
-    </HorizontalScrollView>
 
-    <!-- Hidden section navigator (compat with TV adapter) -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSections"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSections"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
 
     <!-- Main Content -->
     <FrameLayout
         android:id="@+id/content_container"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:padding="16dp">
+        android:padding="@dimen/screen_padding">
 
         <!-- Section: Set Time Limit (Dashboard) -->
         <LinearLayout
@@ -163,10 +79,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1:30:00"
-                android:textSize="42sp"
+                android:textSize="@dimen/lock_timer_text"
                 android:textColor="@color/white"
                 android:fontFamily="sans-serif-light"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="16dp" />
 
             <TextView
                 android:id="@+id/tvLockStatus"
@@ -174,15 +90,15 @@
                 android:layout_height="wrap_content"
                 android:text="Status: Active"
                 android:textColor="@color/admin_text_secondary_light"
-                android:textSize="15sp"
-                android:layout_marginBottom="20dp" />
+                android:textSize="18sp"
+                android:layout_marginBottom="24dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="32dp">
 
                 <Button
                     android:id="@+id/btnSetLimit"
@@ -190,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/set_time_limit"
                     android:textAllCaps="false"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
@@ -204,12 +120,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/unlock_until_tomorrow"
                 android:textAllCaps="false"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textColor="@color/white"
                 android:background="@drawable/bg_admin_button"
                 android:backgroundTint="@null"
                 android:stateListAnimator="@null"
-                android:padding="16dp"
+                android:padding="24dp"
                 android:focusable="true" />
 
         </LinearLayout>
@@ -227,22 +143,22 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvAccessTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/access_management"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="24dp" />
 
+                <!-- Active Codes List (shown first, full list) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/active_codes"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="12dp" />
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvCodes"
@@ -250,21 +166,22 @@
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
                     android:clipToPadding="false"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="24dp" />
 
+                <!-- Generate Codes Section -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/generate_codes_label"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="12dp" />
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="12dp">
+                    android:layout_marginBottom="16dp">
 
                     <EditText
                         android:id="@+id/etCodeCount"
@@ -275,7 +192,7 @@
                         android:inputType="number"
                         android:textColor="@color/white"
                         android:background="@drawable/bg_admin_input"
-                        android:padding="12dp"
+                        android:padding="16dp"
                         android:layout_marginEnd="8dp" />
 
                     <EditText
@@ -287,7 +204,7 @@
                         android:inputType="number"
                         android:textColor="@color/white"
                         android:background="@drawable/bg_admin_input"
-                        android:padding="12dp" />
+                        android:padding="16dp" />
                 </LinearLayout>
 
                 <Button
@@ -296,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/generate_codes_paid"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
@@ -318,21 +235,21 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvSettingsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/section_settings"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="24dp" />
 
+                <!-- Admin PIN -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/admin_pin_label"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="12dp" />
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
 
                 <EditText
                     android:id="@+id/etNewPin"
@@ -344,8 +261,8 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/admin_text_secondary"
                     android:background="@drawable/bg_admin_input"
-                    android:padding="12dp"
-                    android:layout_marginBottom="12dp" />
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
 
                 <Button
                     android:id="@+id/btnChangePin"
@@ -353,26 +270,27 @@
                     android:layout_height="wrap_content"
                     android:text="@string/change_pin"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
                     android:focusable="true"
-                    android:layout_marginBottom="24dp" />
+                    android:layout_marginBottom="32dp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/admin_surface"
-                    android:layout_marginBottom="24dp" />
+                    android:layout_marginBottom="32dp" />
 
+                <!-- General Settings -->
                 <Switch
                     android:id="@+id/switchAutostart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/autostart_label"
                     android:textColor="@color/white"
-                    android:padding="12dp"
+                    android:padding="16dp"
                     android:focusable="true"
                     android:background="@drawable/selector_row_background" />
 
@@ -382,7 +300,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/app_blocking_label"
                     android:textColor="@color/white"
-                    android:padding="12dp"
+                    android:padding="16dp"
                     android:focusable="true"
                     android:background="@drawable/selector_row_background" />
 
@@ -392,7 +310,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/timer_enabled_label"
                     android:textColor="@color/white"
-                    android:padding="12dp"
+                    android:padding="16dp"
                     android:focusable="true"
                     android:background="@drawable/selector_row_background" />
             </LinearLayout>
@@ -409,31 +327,31 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/tvSystemTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/section_system"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="16dp" />
-
+                    android:layout_marginBottom="24dp" />
+                
+                <!-- Accessibility -->
                 <TextView
                     android:id="@+id/tvAccessibilityStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/accessibility_status_placeholder"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:padding="4dp" />
-
+                    android:textSize="18sp"
+                    android:padding="8dp" />
+                
                 <TextView
                     android:id="@+id/tvAccessibilityInstructions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/accessibility_instructions"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="13sp"
-                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:padding="8dp"
                     android:layout_marginBottom="8dp" />
 
                 <Button
@@ -441,31 +359,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/accessibility_settings_button"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="24dp"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
                     android:focusable="true"/>
-
+                
+                <!-- Usage Stats -->
                 <TextView
                     android:id="@+id/tvUsageStatsStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/usage_stats_status_placeholder"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:padding="4dp" />
-
+                    android:textSize="18sp"
+                    android:padding="8dp" />
+                
                 <TextView
                     android:id="@+id/tvUsageStatsInstructions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/usage_stats_instructions"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="13sp"
-                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:padding="8dp"
                     android:layout_marginBottom="8dp" />
 
                 <Button
@@ -474,30 +393,31 @@
                     android:layout_height="wrap_content"
                     android:text="@string/usage_stats_settings_button"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
                     android:focusable="true"
-                    android:layout_marginBottom="16dp" />
-
+                    android:layout_marginBottom="24dp" />
+                
+                <!-- Overlay Permission -->
                 <TextView
                     android:id="@+id/tvOverlayStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/overlay_status_format"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:padding="4dp" />
-
+                    android:textSize="18sp"
+                    android:padding="8dp" />
+                
                 <TextView
                     android:id="@+id/tvOverlayInstructions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/overlay_instructions"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="13sp"
-                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:padding="8dp"
                     android:layout_marginBottom="8dp" />
 
                 <Button
@@ -506,7 +426,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/overlay_settings_button"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
@@ -526,11 +446,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvAboutTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/about_title"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:layout_marginBottom="8dp" />
@@ -541,25 +460,26 @@
                     android:layout_height="wrap_content"
                     android:text="@string/about_version_format"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="16dp" />
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/about_app_description"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="16dp" />
+                    android:textSize="18sp"
+                    android:layout_marginBottom="24dp" />
 
+                <!-- Copyright -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/about_copyright"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="24dp" />
 
             </LinearLayout>
         </ScrollView>
@@ -573,33 +493,33 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                android:padding="24dp">
+                
                 <TextView
-                    android:id="@+id/tvScheduleTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/section_schedule"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="24dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center_vertical">
-
+                    
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/schedule_enabled"
                         android:textColor="@color/white"
-                        android:textSize="15sp" />
-
+                        android:textSize="18sp" />
+                    
                     <Switch
                         android:id="@+id/switchScheduleEnabled"
                         android:layout_width="wrap_content"
@@ -611,16 +531,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/schedule_windows_list"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="13sp"
+                    android:textSize="14sp"
                     android:layout_marginBottom="12dp" />
-
+                
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvTimeWindows"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
                     android:clipToPadding="false"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="16dp" />
 
                 <TextView
                     android:id="@+id/tvNoWindows"
@@ -628,9 +548,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/schedule_no_windows"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textAlignment="center"
-                    android:padding="24dp"
+                    android:padding="32dp"
                     android:visibility="gone" />
 
                 <Button
@@ -639,7 +559,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/schedule_add_window"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
@@ -658,52 +578,53 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                android:padding="24dp">
+                
                 <TextView
-                    android:id="@+id/tvDeviceAdminTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/section_system"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
-
+                    android:layout_marginBottom="24dp" />
+                
                 <TextView
                     android:id="@+id/tvDeviceAdminStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/device_admin_inactive"
                     android:textColor="@color/admin_text_secondary"
-                    android:textSize="15sp"
-                    android:padding="4dp" />
-
+                    android:textSize="18sp"
+                    android:padding="8dp" />
+                
                 <Button
                     android:id="@+id/btnActivateDeviceAdmin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_activate_device_admin"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
+                    android:textSize="24sp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_admin_button"
                     android:backgroundTint="@null"
                     android:focusable="true"
-                    android:layout_marginTop="12dp" />
+                    android:layout_marginTop="16dp" />
             </LinearLayout>
         </ScrollView>
 
+        <!-- Global Message moved inside container -->
         <TextView
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:padding="16dp"
             android:background="#CC000000"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:visibility="gone" />
 
     </FrameLayout>

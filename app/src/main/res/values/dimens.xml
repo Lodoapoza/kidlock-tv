@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="content_max_width">720dp</dimen>
+    <dimen name="lock_timer_text">64sp</dimen>
+    <dimen name="lock_reason_text">24sp</dimen>
+    <dimen name="lock_secondary_text">16sp</dimen>
+    <dimen name="body_text">16sp</dimen>
+    <dimen name="title_text">24sp</dimen>
+    <dimen name="button_text">16sp</dimen>
+    <dimen name="control_height">56dp</dimen>
+    <dimen name="icon_button_size">48dp</dimen>
+    <dimen name="mode_button_width">280dp</dimen>
+    <dimen name="mode_button_height">64dp</dimen>
+</resources>

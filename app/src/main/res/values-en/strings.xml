@@ -6,7 +6,21 @@
     <!-- Main screen -->
     <string name="remaining_time_placeholder">0:00:00</string>
     <string name="remaining_time_format">%s</string>
-    <string name="enter_code">Enter Code to Extend Time</string>
+    <string name="enter_code">Enter code</string>
+
+    <!-- Lock screen — Timer -->
+    <string name="lock_timer_reason">Screen time is over.</string>
+    <string name="lock_timer_unlock_time">Available tomorrow</string>
+
+    <!-- Lock screen — Schedule -->
+    <string name="lock_schedule_reason">It\'s not time yet.</string>
+    <string name="lock_schedule_unlock_time">Available at %1$s</string>
+    <string name="lock_schedule_next_window">Next blocking window: %1$s</string>
+
+    <!-- Lock screen — shared -->
+    <string name="enter_code_schedule">Enter code to unlock</string>
+    <string name="guard_blocked_message">Settings are protected during blocking. Enter the code.</string>
+    <string name="service_disabled_message">The accessibility service was disabled. Re-enable it in Settings to restore blocking.</string>
 
     <!-- Admin panel -->
     <string name="admin_panel">Admin Panel</string>
@@ -22,18 +36,10 @@
 
     <!-- About section (AGPLv3 compliance) -->
     <string name="about_title">About</string>
-    <string name="about_app_description">Parental control app for screen time management on Android TV</string>
-    <string name="about_copyright">Copyright (C) 2026 Yan Masharski</string>
-    <string name="about_license_title">License</string>
-    <string name="about_license_text">This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
-    <string name="about_warranty_title">Warranty Disclaimer</string>
-    <string name="about_warranty_text">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.</string>
-    <string name="about_source_code_title">Source Code</string>
-    <string name="about_source_code_url">https://github.com/yanmasharski/kidlock-tv</string>
-    <string name="about_license_url">https://www.gnu.org/licenses/agpl-3.0.html</string>
-    <string name="about_view_source_code">View Source Code</string>
-    <string name="about_view_license">View Full License</string>
+    <string name="about_app_description">KidLock is a parental-control app for screen-time management on Android TV and Google TV.</string>
+    <string name="about_copyright">Adapted and maintained by KidLock contributors</string>
     <string name="about_version_format">Version: %s</string>
+    <string name="about_contact">KidLock contributors — https://www.github.com/yanmasharski/kidlock-tv —  — /yanmasharski/kidlock-tv</string>
 
     <!-- Codes section -->
     <string name="generate_codes_label">Generate codes:</string>
@@ -51,6 +57,7 @@
     <!-- Time section -->
     <string name="remaining_time_label">Time remaining: --</string>
     <string name="daily_limit_label">Daily limit (minutes):</string>
+    <string name="set_time_limit">Set time limit</string>
     <string name="set_button">Set</string>
     <string name="unlock_button">Unlock</string>
 
@@ -63,6 +70,7 @@
     <string name="autostart_label">App autostart:</string>
     <string name="autostart_description">Automatically start the app when device boots</string>
     <string name="app_blocking_label">App blocking:</string>
+    <string name="timer_enabled_label">Timer mode:</string>
     <string name="app_blocking_description">Enable app blocking when time expires</string>
     <string name="permissions_status_label">Permissions status:</string>
     <string name="accessibility_status_placeholder">Accessibility Service: --</string>
@@ -76,6 +84,8 @@
     <string name="usage_stats_denied">Not granted</string>
     <string name="usage_stats_settings_button">Configure Usage Stats</string>
     <string name="overlay_status_format">Overlay Permission: %s</string>
+    <string name="overlay_granted">Granted</string>
+    <string name="overlay_denied">Not granted</string>
     <string name="overlay_settings_button">Configure Overlay Permission</string>
     <string name="overlay_instructions">To allow the app to show its interface over other apps (blocking), you need to grant Overlay Permission:\n\n1. Press the \"Configure Overlay Permission\" button\n2. Find \"KidLock\" in the list\n3. Turn on \"Allow display over other apps\"\n4. Return to the app.</string>
 
@@ -89,7 +99,10 @@
     <string name="code_length_error">Code must be 6 digits</string>
     <string name="code_already_used_error">Code already used</string>
     <string name="code_activated_format">Code activated! Added %d minutes</string>
+    <string name="code_activated_schedule_hint">%d minutes added. Use the PIN to unlock the schedule.</string>
     <string name="code_not_found_error">Code not found</string>
+    <string name="rate_limit_lockout">Too many attempts. Try again in %ds</string>
+    <string name="rate_limit_reached">5 failed attempts. Locked for 60 seconds.</string>
 
     <!-- Services and notifications -->
     <string name="accessibility_service_description">KidLock service for controlling app usage time on Android TV. Enable this service for automatic app blocking when time runs out. Without this service, the app cannot block access to other apps.</string>
@@ -124,7 +137,6 @@
     <string name="unlock_now">Unlock Now</string>
     <string name="status_locked">Locked</string>
     <string name="status_unlocked">Unlocked</string>
-    <string name="save_limit">Save Limit</string>
     <string name="unlock_until_tomorrow">Unlock Until Tomorrow</string>
     <string name="lock_until_tomorrow">Lock Until Tomorrow</string>
     <string name="time_locked">Locked until tomorrow</string>
@@ -145,6 +157,43 @@
     <string name="system_permissions_title">System Permissions</string>
     <string name="system_diagnostics_title">Diagnostics</string>
 
+    <!-- Schedule section -->
+    <string name="section_schedule">Schedule</string>
+    <string name="schedule_enabled">Enable schedule</string>
+    <string name="schedule_only_warning">Warning: schedule-only mode — no daily time limit will be enforced during allowed hours.</string>
+    <string name="schedule_windows_list">Configured time windows:</string>
+    <string name="schedule_no_windows">No time windows configured</string>
+    <string name="schedule_add_window">+ Add window</string>
+    <string name="schedule_edit_window">Edit window</string>
+    <string name="schedule_days_label">Days of the week</string>
+    <string name="schedule_every_day">Every day</string>
+    <string name="schedule_start_time">Start time:</string>
+    <string name="schedule_end_time">End time:</string>
+    <string name="schedule_type_label">Window type:</string>
+    <string name="schedule_type_block">Block (TV forbidden)</string>
+    <string name="schedule_type_allow">Allow (TV permitted)</string>
+    <string name="schedule_global_block_label">All applications</string>
+    <string name="schedule_save">Save</string>
+    <string name="schedule_active_status">Schedule active</string>
+    <string name="schedule_unlocked_until_format">Unlocked until %1$s</string>
+    <string name="schedule_invalid_window">Invalid window: start and end must be different</string>
+    <string name="schedule_saved">Schedule saved</string>
+    <string name="schedule_invalid">Please check the time input</string>
+    <string name="schedule_overlap_error">This window overlaps an existing one</string>
+    <string name="schedule_max_reached">Maximum %d windows reached</string>
+    <string name="schedule_window_added">Window added</string>
+    <string name="schedule_window_updated">Window updated</string>
+    <string name="schedule_window_removed">Window removed</string>
+    <string name="schedule_delete_title">Delete window</string>
+    <string name="schedule_delete_message">Delete window %s?</string>
+    <string name="schedule_blocked_title">Outside viewing hours</string>
+    <string name="schedule_blocked_message">Not time for TV yet. Enter a code to unlock.</string>
+
+    <!-- Device admin -->
+    <string name="device_admin_active">Active</string>
+    <string name="device_admin_inactive">Inactive</string>
+    <string name="btn_activate_device_admin">Enable protection</string>
+
     <!-- Onboarding -->
     <string name="onboarding_welcome_title">Welcome to KidLock</string>
     <string name="onboarding_welcome_description">Set up screen time protection in a few steps.</string>
@@ -162,6 +211,10 @@
     <string name="onboarding_usage_stats_status_placeholder">Status: --</string>
     <string name="onboarding_usage_stats_status_format">Status: %s</string>
     <string name="onboarding_usage_stats_warning">You can skip this, but limits may be inaccurate.</string>
+
+    <string name="onboarding_autostart_title">App autostart</string>
+    <string name="onboarding_autostart_description">Automatically launch KidLock when the device boots, so blocking is always active.</string>
+    <string name="onboarding_autostart_enable">Yes, enable autostart</string>
 
     <string name="onboarding_time_limit_title">Base daily limit</string>
     <string name="onboarding_time_limit_description">Choose a preset.</string>
@@ -190,4 +243,15 @@
     <string name="onboarding_next">Next</string>
     <string name="onboarding_back">Back</string>
     <string name="onboarding_skip">Skip</string>
+
+    <!-- Mode selection -->
+    <string name="onboarding_mode_title">Choose protection mode</string>
+    <string name="onboarding_mode_description">How would you like to manage screen time?</string>
+    <string name="onboarding_mode_timer">Timer</string>
+    <string name="onboarding_mode_timer_desc">Set a daily time limit</string>
+    <string name="onboarding_timer_hint">Timer: blocking will activate once your daily limit (%1$s) is reached.</string>
+    <string name="onboarding_mode_schedule">Schedule</string>
+    <string name="onboarding_mode_schedule_desc">Set allowed time windows</string>
+    <string name="onboarding_schedule_hint">Schedule: blocking will activate as soon as a time window is set, in the Time windows section of the admin.</string>
+    <string name="schedule_requires_window">Add at least one time window first, then enable the schedule.</string>
 </resources>

@@ -7,58 +7,40 @@
     android:padding="@dimen/screen_padding">
 
     <TextView
-        android:id="@+id/tvAccessibilityTitle"
+        android:id="@+id/tvAutostartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/onboarding_accessibility_title"
+        android:text="@string/onboarding_autostart_title"
         android:textColor="@color/admin_text_primary"
         android:textSize="@dimen/title_text"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvAccessibilityDescription"
+        android:id="@+id/tvAutostartDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/onboarding_accessibility_description"
+        android:text="@string/onboarding_autostart_description"
         android:textColor="@color/admin_text_secondary"
-        android:textSize="@dimen/body_text" />
-
-    <TextView
-        android:id="@+id/tvAccessibilitySteps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/onboarding_accessibility_steps"
-        android:textColor="@color/admin_text_secondary"
-        android:textSize="@dimen/body_text" />
-
-    <TextView
-        android:id="@+id/tvAccessibilityStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/onboarding_accessibility_status_placeholder"
-        android:textColor="@color/status_bad"
         android:textSize="@dimen/body_text" />
 
     <Button
-        android:id="@+id/btnOpenAccessibilitySettings"
+        android:id="@+id/btnAutostartEnable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bg_admin_button"
         app:backgroundTint="@null"
         android:focusable="true"
         android:focusableInTouchMode="false"
-        android:nextFocusUp="@id/btnOpenAccessibilitySettings"
-        android:nextFocusDown="@id/btnAccessibilityBack"
-        android:nextFocusLeft="@id/btnOpenAccessibilitySettings"
-        android:nextFocusRight="@id/btnOpenAccessibilitySettings"
+        android:nextFocusUp="@id/btnAutostartEnable"
+        android:nextFocusDown="@id/btnAutostartBack"
+        android:nextFocusLeft="@id/btnAutostartEnable"
+        android:nextFocusRight="@id/btnAutostartEnable"
         android:paddingHorizontal="28dp"
         android:paddingVertical="10dp"
         android:stateListAnimator="@null"
-        android:text="@string/onboarding_open_settings"
+        android:text="@string/onboarding_autostart_enable"
         android:textColor="@color/white"
         android:textSize="@dimen/body_text" />
 
@@ -69,17 +51,17 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnAccessibilityBack"
+            android:id="@+id/btnAutostartBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_admin_button"
             app:backgroundTint="@null"
             android:focusable="true"
             android:focusableInTouchMode="false"
-            android:nextFocusLeft="@id/btnAccessibilityBack"
-            android:nextFocusRight="@id/btnAccessibilityNext"
-            android:nextFocusUp="@id/btnOpenAccessibilitySettings"
-            android:nextFocusDown="@id/btnAccessibilityBack"
+            android:nextFocusLeft="@id/btnAutostartBack"
+            android:nextFocusRight="@id/btnAutostartSkip"
+            android:nextFocusUp="@id/btnAutostartEnable"
+            android:nextFocusDown="@id/btnAutostartBack"
             android:paddingHorizontal="24dp"
             android:paddingVertical="10dp"
             android:stateListAnimator="@null"
@@ -88,7 +70,7 @@
             android:textSize="@dimen/body_text" />
 
         <Button
-            android:id="@+id/btnAccessibilityNext"
+            android:id="@+id/btnAutostartSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -96,15 +78,15 @@
             app:backgroundTint="@null"
             android:focusable="true"
             android:focusableInTouchMode="false"
-            android:nextFocusLeft="@id/btnAccessibilityBack"
-            android:nextFocusRight="@id/btnAccessibilityNext"
-            android:nextFocusUp="@id/btnOpenAccessibilitySettings"
-            android:nextFocusDown="@id/btnAccessibilityNext"
+            android:nextFocusLeft="@id/btnAutostartBack"
+            android:nextFocusRight="@id/btnAutostartSkip"
+            android:nextFocusUp="@id/btnAutostartEnable"
+            android:nextFocusDown="@id/btnAutostartSkip"
             android:paddingHorizontal="24dp"
             android:paddingVertical="10dp"
             android:stateListAnimator="@null"
-            android:text="@string/onboarding_next"
-            android:textColor="@color/button_text_color"
+            android:text="@string/onboarding_skip"
+            android:textColor="@color/white"
             android:textSize="@dimen/body_text" />
     </LinearLayout>
 </LinearLayout>

@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/admin_background"
-    android:padding="48dp">
+    android:padding="@dimen/screen_padding">
 
     <!-- Header / Logo -->
     <LinearLayout
@@ -25,27 +25,51 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="@dimen/body_text"
             android:layout_marginTop="4dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="@dimen/screen_padding">
 
-        <!-- Timer -->
+        <!-- Raison du blocage (ex: "Le temps d'écran est terminé") -->
+        <TextView
+            android:id="@+id/tvBlockReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/lock_reason_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- Timer (visible en mode TIMER uniquement) -->
         <TextView
             android:id="@+id/tvRemainingTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0:58:34"
-            android:textSize="120sp"
+            android:textSize="@dimen/lock_timer_text"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-light"
-            android:layout_marginBottom="48dp" />
+            android:layout_marginBottom="32dp" />
+
+        <!-- Heure de déblocage (ex: "Disponible demain à 15h") -->
+        <TextView
+            android:id="@+id/tvUnlockTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/lock_secondary_text"
+            android:textColor="@color/main_text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="48dp"
+            android:visibility="gone" />
 
         <!-- Input Capsule -->
         <FrameLayout
@@ -59,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="••••••"
-                android:textSize="32sp"
+                android:textSize="@dimen/title_text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/main_text_secondary"
                 android:letterSpacing="0.4"
@@ -74,22 +98,23 @@
                 android:imeOptions="actionDone" />
         </FrameLayout>
 
-        <!-- Secondary Label -->
+        <!-- Action (ex: "Demande un code à un parent") -->
         <TextView
             android:id="@+id/tvCodeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/enter_code"
-            android:textSize="24sp"
+            android:textSize="@dimen/lock_secondary_text"
             android:textColor="@color/main_text_secondary"
             android:layout_marginBottom="16dp" />
 
+        <!-- Message d'erreur / info -->
         <TextView
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="16sp"
+            android:textSize="@dimen/body_text"
             android:textColor="@color/status_bad"
             android:minHeight="24dp"
             android:gravity="center" />
@@ -101,12 +126,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/admin_panel"
-        android:textSize="24sp"
+        android:textSize="@dimen/lock_secondary_text"
         android:paddingHorizontal="32dp"
         android:paddingVertical="12dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/bg_admin_button"
-        android:visibility="gone" />
+        android:contentDescription="@string/admin_panel"
+        android:focusable="true"
+        android:visibility="visible" />
 
 </RelativeLayout>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/admin_background"
     android:orientation="vertical"
-    android:padding="48dp">
+    android:padding="@dimen/screen_padding">
 
     <TextView
         android:id="@+id/tvTimeLimitTitle"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/onboarding_time_limit_title"
         android:textColor="@color/admin_text_primary"
-        android:textSize="32sp"
+        android:textSize="@dimen/title_text"
         android:textStyle="bold" />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_marginTop="12dp"
         android:text="@string/onboarding_time_limit_description"
         android:textColor="@color/admin_text_secondary"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 
     <LinearLayout
         android:id="@+id/layoutPresetContainer"
@@ -39,7 +39,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/onboarding_time_limit_selected_placeholder"
         android:textColor="@color/admin_text_secondary"
-        android:textSize="16sp" />
+        android:textSize="@dimen/body_text" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             android:stateListAnimator="@null"
             android:text="@string/onboarding_back"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="@dimen/body_text" />
 
         <Button
             android:id="@+id/btnTimeLimitNext"
@@ -84,6 +84,6 @@
             android:stateListAnimator="@null"
             android:text="@string/onboarding_next"
             android:textColor="@color/button_text_color"
-            android:textSize="18sp" />
+            android:textSize="@dimen/body_text" />
     </LinearLayout>
 </LinearLayout>

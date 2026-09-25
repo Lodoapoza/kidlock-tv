@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/screen_padding"
+    android:background="@color/admin_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_mode_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_mode_description"
+        android:textColor="@color/admin_text_secondary_light"
+        android:textSize="@dimen/body_text"
+        android:layout_marginBottom="48dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnModeTimer"
+        android:layout_width="@dimen/mode_button_width"
+        android:layout_height="@dimen/mode_button_height"
+        android:text="@string/onboarding_mode_timer"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_admin_button"
+        android:backgroundTint="@null"
+        android:layout_marginBottom="24dp"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/btnModeSchedule"
+        android:layout_width="@dimen/mode_button_width"
+        android:layout_height="@dimen/mode_button_height"
+        android:text="@string/onboarding_mode_schedule"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_admin_button"
+        android:backgroundTint="@null"
+        android:layout_marginBottom="24dp"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/btnModeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_back"
+        android:textAllCaps="false"
+        android:textSize="@dimen/body_text"
+        android:textColor="@color/admin_text_secondary_light"
+        android:background="@drawable/selector_ghost_button"
+        android:backgroundTint="@null"
+        android:focusable="true"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

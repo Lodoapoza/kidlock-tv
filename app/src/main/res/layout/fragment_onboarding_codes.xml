@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/admin_background"
     android:orientation="vertical"
-    android:padding="48dp">
+    android:padding="@dimen/screen_padding">
 
     <TextView
         android:id="@+id/tvCodesTitle"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/onboarding_codes_title"
         android:textColor="@color/admin_text_primary"
-        android:textSize="32sp"
+        android:textSize="@dimen/title_text"
         android:textStyle="bold" />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_marginTop="12dp"
         android:text="@string/onboarding_codes_description"
         android:textColor="@color/admin_text_secondary"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 
     <TextView
         android:id="@+id/tvCodesList"
@@ -32,7 +32,7 @@
         android:fontFamily="monospace"
         android:text="@string/onboarding_codes_empty"
         android:textColor="@color/admin_text_primary"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 
     <Button
         android:id="@+id/btnGenerateInitialCodes"
@@ -52,7 +52,7 @@
         android:stateListAnimator="@null"
         android:text="@string/onboarding_codes_generate"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
             android:stateListAnimator="@null"
             android:text="@string/onboarding_finish"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="@dimen/body_text" />
 
         <Button
             android:id="@+id/btnOpenAdminPanel"
@@ -97,6 +97,6 @@
             android:stateListAnimator="@null"
             android:text="@string/onboarding_open_admin"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="@dimen/body_text" />
     </LinearLayout>
 </LinearLayout>

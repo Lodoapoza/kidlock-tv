@@ -5,7 +5,7 @@
     android:background="@color/admin_background"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="48dp">
+    android:padding="@dimen/screen_padding">
 
     <TextView
         android:id="@+id/tvWelcomeTitle"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/onboarding_welcome_title"
         android:textColor="@color/admin_text_primary"
-        android:textSize="32sp"
+        android:textSize="@dimen/title_text"
         android:textStyle="bold" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:gravity="center"
         android:text="@string/onboarding_welcome_description"
         android:textColor="@color/admin_text_secondary"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 
     <Button
         android:id="@+id/btnStartOnboarding"
@@ -44,5 +44,5 @@
         android:stateListAnimator="@null"
         android:text="@string/onboarding_start_button"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="@dimen/body_text" />
 </LinearLayout>

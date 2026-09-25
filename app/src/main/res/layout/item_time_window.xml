@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_admin_input">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTimeRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTypeBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:layout_marginStart="12dp" />
+
+        <Button
+            android:id="@+id/btnEditWindow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:background="@drawable/selector_ghost_button"
+            android:backgroundTint="@null"
+            android:drawableTop="@android:drawable/ic_menu_edit"
+            android:drawableTint="@color/white"
+            android:contentDescription="Modifier la plage"
+            android:focusable="true"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btnDeleteWindow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:background="@drawable/selector_ghost_button"
+            android:backgroundTint="@null"
+            android:drawableTop="@android:drawable/ic_menu_delete"
+            android:drawableTint="@color/status_bad"
+            android:contentDescription="Supprimer la plage"
+            android:focusable="true"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAppsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/admin_text_secondary"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvDaysInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/admin_text_secondary"
+        android:textSize="13sp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+</LinearLayout>

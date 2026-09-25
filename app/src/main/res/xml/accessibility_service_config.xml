@@ -5,6 +5,4 @@
     android:accessibilityFlags="flagDefault|flagIncludeNotImportantViews|flagRetrieveInteractiveWindows|flagReportViewIds"
     android:accessibilityFeedbackType="feedbackGeneric"
     android:notificationTimeout="100"
-    android:canRetrieveWindowContent="true"
-    android:settingsActivity="uk.telegramgames.kidlock.AdminActivity" />
-
+    android:canRetrieveWindowContent="true" />

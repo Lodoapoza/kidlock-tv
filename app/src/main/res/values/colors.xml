@@ -6,18 +6,20 @@
     <!-- TV UI Colors -->
     <color name="admin_background">#000000</color>
     <color name="admin_surface">#121212</color>
-    <color name="admin_primary">#00A3FF</color>
-    <color name="admin_primary_focused">#33CCFF</color>
-    <color name="admin_focus_stroke">#00A3FF</color>
-    <color name="main_accent">#00A3FF</color>
+    <color name="admin_primary">#006B9E</color>
+    <color name="admin_primary_focused">#0077B5</color>
+    <color name="admin_focus_stroke">#66D9FF</color>
+    <color name="main_accent">#006B9E</color>
     <color name="main_text_secondary">#888888</color>
     <color name="admin_text_primary">#FFFFFF</color>
     <color name="admin_text_secondary">#888888</color>
     <color name="admin_text_secondary_light">#B0B0B0</color>
-    <color name="status_good">#4CAF50</color>
-    <color name="status_bad">#F44336</color>
+    <color name="status_good">#2E7D32</color>
+    <color name="status_bad">#C62828</color>
+    <color name="focus_surface">#260077B5</color>
+    <color name="selected_surface">#1A0077B5</color>
     
     <!-- Disabled states -->
-    <color name="admin_primary_disabled">#4D00A3FF</color>
+    <color name="admin_primary_disabled">#4D006B9E</color>
     <color name="admin_text_disabled">#80FFFFFF</color>
 </resources>
